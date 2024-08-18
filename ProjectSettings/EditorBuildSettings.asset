@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/001-Main.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/002-Sync.unity
     guid: 39aff1df1d5dfc94b85e0f0ffafcb6fb
+  - enabled: 1
+    path: Assets/Scenes/001-Main.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Scene 01.unity
     guid: 783e92d2925aa45baaf36a17aa879773
@@ -25,7 +25,7 @@ EditorBuildSettings:
     guid: c497bac81875144b193a34dcb980603e
   - enabled: 1
     path: Assets/Scenes/Scene 05 Cave.unity
-    guid: e8590d4cd534f47c6ab37c4d24b6d4d3
+    guid: b3ff86804d41a4dd994fce5d8cce2b16
   - enabled: 1
     path: Assets/Scenes/Scene 06.unity
     guid: 17f753153b1b34f7e8dff3918d768891

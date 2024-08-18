@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class SceneArea : MonoBehaviour
+public class SceneAreaGameObject : MonoBehaviour
 {
-    public string SceneName;
+    public GameObject SceneGameObject;
     
     public UnityEvent OnEnter;
+    
+    public bool DoExit = true;
     
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
@@ -17,7 +19,8 @@ public class SceneArea : MonoBehaviour
         if (other.CompareTag("Player") && other.gameObject.activeSelf)
         {
             // load scene by name, keep current scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(SceneName, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+            SceneGameObject.SetActive(true);
+            
             OnEnter.Invoke();
         }
     }
@@ -25,10 +28,10 @@ public class SceneArea : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // if other contains player tag and active self
-        if (other.CompareTag("Player") && other.gameObject.activeSelf)
+        if (other.CompareTag("Player") && other.gameObject.activeSelf && DoExit)
         {
             // unload scene by name
-            UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(SceneName);
+            SceneGameObject.SetActive(false);
         }
     }
 }
